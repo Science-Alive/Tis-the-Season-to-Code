@@ -4,17 +4,22 @@
 ====================================
 - Affects the entire page (The skeleton)
 */
+:root {
+    --primary-color: #E7B874;
+    --secondary-color: #C0392B;
+    --background-color: #2A4B4A; 
+    --text-color: #FAF0DC;
+}
+
 body {
     /* New Font: Clean, modern serif imported in HTML */
     font-family: 'Merriweather', serif;
     
-    /* New Color Palette */
-    background-color: #2A4B4A; /* Dark Teal Background */
-    color: #FAF0DC; /* Creamy Off-White Text */
+    background-color: var(--background-color); /* Dark Teal Background */
+    color: var(--text-color); /* Creamy Off-White Text */
     line-height: 1.6; /* Adds space between lines of text (improves readability) */
     text-align: left; /* Reset to left-align within the main block */
 
-    /* Centering the Content Block (The Magic) */
     max-width: 800px; /* Max width for a clean content column */
     margin: 40px auto; /* Centers the 800px block and adds space above/below */
     padding: 20px;
@@ -26,26 +31,23 @@ body {
 2. HEADER & TITLES
 ====================================
 */
-.header {
-    border-bottom: 3px solid #E7B874; /* Soft Gold line beneath the main title */
+
+h1 {
+    font-size: 2.5em; /* Make it large and impactful */
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color); /* Soft Gold line beneath the main title */
     margin-bottom: 30px; 
 }
 
-h1 {
-    color: #FAF0DC; /* Ensure the main title is the cream color */
-    font-size: 2.5em; /* Make it large and impactful */
-    margin-bottom: 5px; /* Pull the title closer to the divider line */
-}
-
 h2 {
-    color: #E7B874; /* Use the soft gold for section headers */
-    border-bottom: 1px solid #2A4B4A; /* No border, but leave space */
+    color: var(--primary-color); /* Use the soft gold for section headers */
+    border-bottom: 1px solid var(--background-color); /* No border, but leave space */
     padding-top: 20px;
     padding-bottom: 5px;
 }
 
 .bigbold {
-    border: 3px solid #C0392B; /* Cardinal Red border for emphasis */
+    border: 3px solid var(--secondary-color); /* Cardinal Red border for emphasis */
     padding: 10px;
     font-weight: 700;
     font-size: 1.1rem;
@@ -53,14 +55,13 @@ h2 {
     margin-bottom: 30px;
 }
 
-
 /* 
 ====================================
 3. IMAGES & LISTS
 ====================================
 */
 img {
-    border: 5px solid #E7B874; /* Soft Gold border */
+    border: 5px solid var(--primary-color); /* Soft Gold border */
     border-radius: 10px; /* Softens the look with rounded corners */
     display: block;      /* Makes it its own block to enable margin: auto */
     margin: 20px auto;   /* Centers the image horizontally */
@@ -82,7 +83,7 @@ ul li {
 
 /* Styling the link that is INSIDE the list */
 ul a {
-    color: #C0392B; /* Cardinal Red accent for the link */
+    color: var(--secondary-color); /* Cardinal Red accent for the link */
     font-weight: 700;
     text-decoration: none; /* Remove the underline */
 }
